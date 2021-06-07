@@ -1,29 +1,17 @@
-$(document).ready(function () {
-  'use strict';
-    // Opens/closes the sidebar menu
-  $(".menu-toggle").click(function (e) {
+document.addEventListener('DOMContentLoaded', function () {
+  // Opens/closes the sidebar menu
+  document.querySelectorAll('.menu-toggle').forEach((item)=>{item.addEventListener("click", (e) => {
     e.preventDefault();
-    $(".sidebar-wrapper").toggleClass("active");
-  });
-
-  $(function () {
-    $('a[href*=#]:not([href=#])').click(function () {
-      if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') || location.hostname === this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        if (target.length) {
-          $('html,body').animate({
-            scrollTop: target.offset().top
-          }, 1000);
-          return false;
-        }
-      }
-    });
-  });
-  $(function () {
-    var width = $(window).width();
-    if (width <= 1200) {
-      $('section#portfolio.portfolio').removeClass('data-featherlight data-featherlight-filter="a" data-featherlight-type="iframe" data-featherlight-iframe-height="720" data-featherlight-iframe-width="1080"');
+    document.querySelector('.sidebar-wrapper').classList.toggle('active');
+    const burger = document.getElementById('burger');
+    if (burger.classList.contains('fa-bars')) {
+      burger.classList.remove('fa-bars');
+      burger.classList.add('fa-times')
+    }
+    else {
+      burger.classList.remove('fa-times');
+			burger.classList.add('fa-bars');
     }
   });
+  })
 });
