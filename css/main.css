@@ -155,7 +155,7 @@ a {
 .sidebar-wrapper.active {
 	right: 180px;
 	width: 250px;
-	height: 37%;
+	height: 25%;
 	-webkit-transition: all 0.4s ease 0s;
 	-moz-transition: all 0.4s ease 0s;
 	-ms-transition: all 0.4s ease 0s;
