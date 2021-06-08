@@ -8,7 +8,8 @@ body {
 
 body {
 	font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    max-width: 100%;
+  max-width: 100%;
+	min-width: 576px;
 }
 h1,
 h2 {
@@ -230,8 +231,9 @@ i.text-secondary {
 /* Portfolio */
 .portfolio-item {
 	margin: 10px;
-    border: 15px inset rgba(51, 154, 240, .1);
-    border-radius: 10%;
+	border: 15px inset rgba(51, 154, 240, .1);
+  border-radius: 10%;
+	max-width: 100%;
 	display: inline-block;
 	position: relative;
 }
